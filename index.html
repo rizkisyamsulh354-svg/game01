@@ -66,6 +66,154 @@
         <div id="particleContainer" class="particle-container"></div>
     </div>
 
+    <!-- Tutorial Modal -->
+    <div id="tutorialModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-close" id="closeModal">&times;</div>
+            
+            <div class="tutorial-header">
+                <h1>🎮 Selamat Datang di Tetris! 🎮</h1>
+            </div>
+
+            <div class="tutorial-tabs">
+                <button class="tab-btn active" data-tab="howto">📖 Cara Main</button>
+                <button class="tab-btn" data-tab="controls">⌨️ Kontrol</button>
+                <button class="tab-btn" data-tab="tips">💡 Tips</button>
+            </div>
+
+            <div class="tutorial-content">
+                <!-- How to Play Tab -->
+                <div class="tab-content active" id="howto">
+                    <h2>Cara Main Tetris</h2>
+                    <div class="tutorial-item">
+                        <div class="item-number">1️⃣</div>
+                        <div class="item-text">
+                            <h3>Blok Turun Otomatis</h3>
+                            <p>Blok Tetris akan terus turun ke bawah. Arahkan blok ke posisi yang tepat sebelum blok menyentuh dasar papan!</p>
+                        </div>
+                    </div>
+
+                    <div class="tutorial-item">
+                        <div class="item-number">2️⃣</div>
+                        <div class="item-text">
+                            <h3>Isi Satu Baris Penuh</h3>
+                            <p>Susun blok-blok sehingga membentuk satu baris yang penuh tanpa ada celah. Baris yang penuh akan hilang dan memberikan poin!</p>
+                        </div>
+                    </div>
+
+                    <div class="tutorial-item">
+                        <div class="item-number">3️⃣</div>
+                        <div class="item-text">
+                            <h3>Tingkatkan Level</h3>
+                            <p>Semakin banyak baris yang dihapus, semakin tinggi level Anda. Level yang lebih tinggi membuat blok jatuh lebih cepat!</p>
+                        </div>
+                    </div>
+
+                    <div class="tutorial-item">
+                        <div class="item-number">⚡</div>
+                        <div class="item-text">
+                            <h3>Efek Percikan Spektakuler</h3>
+                            <p>Setiap kali baris terhapus, ledakan percikan berwarna-warni akan muncul! Tema juga akan berubah setiap 5 baris dihapus untuk variasi visual.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controls Tab -->
+                <div class="tab-content" id="controls">
+                    <h2>Kontrol Permainan</h2>
+                    
+                    <div class="controls-section">
+                        <h3>👤 Player 1 (Solo & Multiplayer)</h3>
+                        <div class="key-binding">
+                            <span class="key">← →</span>
+                            <span class="desc">Gerak Kiri/Kanan</span>
+                        </div>
+                        <div class="key-binding">
+                            <span class="key">↓</span>
+                            <span class="desc">Jatuh Lebih Cepat</span>
+                        </div>
+                        <div class="key-binding">
+                            <span class="key">Z / X</span>
+                            <span class="desc">Rotasi Blok</span>
+                        </div>
+                    </div>
+
+                    <div class="controls-section">
+                        <h3>👥 Player 2 (Multiplayer Only)</h3>
+                        <div class="key-binding">
+                            <span class="key">A / D</span>
+                            <span class="desc">Gerak Kiri/Kanan</span>
+                        </div>
+                        <div class="key-binding">
+                            <span class="key">S</span>
+                            <span class="desc">Jatuh Lebih Cepat</span>
+                        </div>
+                        <div class="key-binding">
+                            <span class="key">Q / E</span>
+                            <span class="desc">Rotasi Blok</span>
+                        </div>
+                    </div>
+
+                    <div class="controls-section">
+                        <h3>🎮 Tombol Kontrol</h3>
+                        <div class="key-binding">
+                            <span class="key">START GAME</span>
+                            <span class="desc">Mulai Permainan</span>
+                        </div>
+                        <div class="key-binding">
+                            <span class="key">PAUSE</span>
+                            <span class="desc">Hentikan Sementara</span>
+                        </div>
+                        <div class="key-binding">
+                            <span class="key">RESET</span>
+                            <span class="desc">Mulai Dari Awal</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tips Tab -->
+                <div class="tab-content" id="tips">
+                    <h2>💡 Tips & Trik</h2>
+                    
+                    <div class="tip-item">
+                        <h3>🎯 Maksimalkan Poin</h3>
+                        <p>Jangan terburu-buru! Hitung posisi blok dengan hati-hati. Menghapus 4 baris sekaligus (Tetris!) memberikan poin 4x lipat dibanding menghapus 1 baris!</p>
+                    </div>
+
+                    <div class="tip-item">
+                        <h3>🌈 Manfaatkan Tema Berbeda</h3>
+                        <p>Setiap tema memiliki warna blok yang berbeda. Ini membantu Anda tetap fokus dan tidak bosan. Terus hapus baris untuk membuka tema baru!</p>
+                    </div>
+
+                    <div class="tip-item">
+                        <h3>🏃 Latih Refleks Anda</h3>
+                        <p>Di level tinggi, blok jatuh sangat cepat! Praktik di level rendah dulu, lalu naikkan difficulty secara bertahap untuk melatih reflek Anda.</p>
+                    </div>
+
+                    <div class="tip-item">
+                        <h3>⏸️ Gunakan Pause Dengan Bijak</h3>
+                        <p>Jika blok jatuh terlalu cepat, gunakan tombol PAUSE untuk berpikir strategi. Tapi ingat, di arcade nyata tidak ada pause! 😄</p>
+                    </div>
+
+                    <div class="tip-item">
+                        <h3>👥 Multiplayer Strategy</h3>
+                        <p>Di mode multiplayer, fokus pada score Anda sendiri. Jangan terpancing untuk "sabotase" lawan. Yang penting adalah skill bermain Anda!</p>
+                    </div>
+
+                    <div class="tip-item">
+                        <h3>⚡ Strategi Cepat</h3>
+                        <p>Blok I (garis) adalah kunci untuk Tetris! Cobalah membuat lubang vertikal untuk menampung blok I dan dapatkan poin maksimal.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tutorial-footer">
+                <p>Siap bermain? Klik di bawah untuk mulai!</p>
+                <button id="startTutorialBtn" class="btn-primary">Mulai Bermain 🎮</button>
+            </div>
+        </div>
+    </div>
+
     <script src="tetris.js"></script>
 </body>
 </html>

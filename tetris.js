@@ -509,6 +509,56 @@ class GameController {
         
         document.addEventListener('keydown', (e) => this.handleKeyDown(e));
         document.addEventListener('keyup', (e) => this.handleKeyUp(e));
+        
+        // Setup tutorial
+        this.setupTutorial();
+    }
+
+    setupTutorial() {
+        const modal = document.getElementById('tutorialModal');
+        const closeModal = document.getElementById('closeModal');
+        const startTutorialBtn = document.getElementById('startTutorialBtn');
+        const tabBtns = document.querySelectorAll('.tab-btn');
+
+        // Show tutorial on page load
+        modal.classList.remove('hidden');
+
+        // Close modal when X is clicked
+        closeModal.addEventListener('click', () => {
+            modal.classList.add('hidden');
+        });
+
+        // Close modal when "Mulai Bermain" is clicked
+        startTutorialBtn.addEventListener('click', () => {
+            modal.classList.add('hidden');
+        });
+
+        // Tab switching functionality
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tabName = btn.getAttribute('data-tab');
+
+                // Remove active class from all buttons
+                tabBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+
+                // Hide all tab contents
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+
+                // Show selected tab content
+                document.getElementById(tabName).classList.add('active');
+            });
+        });
+
+        // Close tutorial when modal background is clicked
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.add('hidden');
+            }
+        });
     }
 
     setSinglePlayer() {
